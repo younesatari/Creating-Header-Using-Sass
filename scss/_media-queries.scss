@@ -1,0 +1,30 @@
+/* Media Queries */
+@mixin largeScreen {
+   @media screen and (max-width:1085px) {
+      @content;
+   }
+}
+
+@mixin ipad {
+   @media screen and (max-width:865px) {
+      @content;
+   }
+}
+
+@mixin tablet {
+   @media screen and (max-width:535px) {
+      @content;
+   }
+}
+
+@mixin mobile {
+   @media screen and (max-width:360px) {
+      @content;
+   }
+}
+
+@mixin forIphone {
+   @media screen and (max-width:414px) {
+      @content;
+   }
+}

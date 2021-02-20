@@ -20,12 +20,25 @@ body {
          position:relative;
 
          &-container {
-            max-width: 1200px;
+            width: 85vw;
+            padding:.5rem;
             margin: 0 auto;
             position: absolute;
             top:40%;
             left:50%;
             transform: translate(-50%,-50%);
+
+            @include forIphone {
+               width: 95vw;
+            }
+
+            @include ipad {
+               top:40%;
+            }
+
+            @include forIphone {
+               width: 100vw;
+            }
 
             .hero-content {
                padding: 1rem;
@@ -34,11 +47,38 @@ body {
                .hero-content-heading {
                   font-size: 2rem;
                   margin-bottom: 1rem;
+                  padding: 0 .5rem;
+
+                  @include largeScreen {
+                     font-size: 1.5rem;
+                  }
+
+                  @include ipad {
+                     font-size: 1.3rem;
+                  }
+
+                  @include forIphone {
+                     font-size: 1rem;
+                  }
+
                }
 
                p {
                   font-size: 1.3rem;
-                  margin-bottom: 2.5rem;
+                  width:60%;
+                  margin:0 auto 2.5rem;
+
+                  @include largeScreen {
+                     font-size: 1.15rem;
+                  }
+
+                  @include ipad {
+                     font-size: 1.1rem;
+                  }
+
+                  @include forIphone{
+                     font-size: 1rem;
+                  }
                }
 
                .hero-content-btns {
@@ -47,6 +87,16 @@ body {
                      padding: 1.2rem 2rem;
                      font-size: 1.3rem;
                      margin: 0 .7rem;
+
+                     @include ipad {
+                        padding: 1rem 1.7rem;
+                        font-size: 1rem;
+                     }
+
+                     @include forIphone {
+                        padding: .7rem 1.4rem;
+                        font-size: .8rem;
+                     }
 
                      &:hover {
                         opacity:.9;
@@ -61,6 +111,16 @@ body {
                      color:$light;
                      padding: 1.2rem 2rem;
                      font-size: 1.3rem;
+
+                     @include ipad {
+                        padding: 1rem 1.7rem;
+                        font-size: 1rem;
+                     }
+
+                     @include forIphone {
+                        padding: .7rem 1.4rem;
+                        font-size: .8rem;
+                     }
 
                      &:hover {
                         opacity:.9;
