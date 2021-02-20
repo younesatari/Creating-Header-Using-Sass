@@ -1,0 +1,69 @@
+@import "variables";
+
+%align-items {
+   display: flex;
+   align-items: center;
+}
+
+%shared-btn {
+   background-color: $light;
+   color: $primary !important;
+   border-radius: 4px;
+   text-decoration: none;
+}
+
+.container {
+   width:100%;
+   max-width: 1100px;
+   margin: 0 auto;
+   padding:0 1rem;
+}
+
+.navbar {
+   height: 65px;
+   border-bottom: 1px solid rgba(255,255,255,.1);
+   @extend %align-items;
+   
+   &-inner {
+      @extend %align-items;
+      justify-content: space-between;
+
+      .navbar-brand {
+         text-decoration: none;
+         color: $light;
+         font-size: 30px;
+         font-weight: bold;
+      }
+
+      .navbar-nav {
+         @extend %align-items;
+         justify-content: center;
+
+         .nav-item {
+            list-style: none;
+            padding:1.5rem 1.1rem;
+
+            .nav-link {
+               text-decoration: none;
+               color: darken($light, 7%);
+               font-weight: bold;
+               font-size: .95rem;
+
+               &:hover {
+                  color: $light;
+                  transition: all .3s ease;
+               }
+            }
+         }
+
+         .nav-btn {
+            @extend %shared-btn;
+            padding:.7rem 1.2rem;
+
+            &:hover {
+               opacity: .9;
+            }
+         }
+      }
+   }
+}

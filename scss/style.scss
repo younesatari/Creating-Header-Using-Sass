@@ -1,0 +1,75 @@
+@import "navbar";
+
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   outline: 0;
+}
+
+body {
+   font-family: 'Roboto', sans-serif;
+
+   .header {
+      background-image: linear-gradient(to right, $primary, $dark);
+      color: $light;
+      height: 100vh;
+
+      .hero {
+         height:100%;
+         position:relative;
+
+         &-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: absolute;
+            top:40%;
+            left:50%;
+            transform: translate(-50%,-50%);
+
+            .hero-content {
+               padding: 1rem;
+               text-align: center;
+
+               .hero-content-heading {
+                  font-size: 2rem;
+                  margin-bottom: 1rem;
+               }
+
+               p {
+                  font-size: 1.3rem;
+                  margin-bottom: 2.5rem;
+               }
+
+               .hero-content-btns {
+                  .btn-primary {
+                     @extend %shared-btn;
+                     padding: 1.2rem 2rem;
+                     font-size: 1.3rem;
+                     margin: 0 .7rem;
+
+                     &:hover {
+                        opacity:.9;
+                        transition: all .3s ease;
+                     }
+                  }
+
+                  .btn-secondary {
+                     border-radius: 4px;
+                     text-decoration: none;
+                     background-color: $dark;
+                     color:$light;
+                     padding: 1.2rem 2rem;
+                     font-size: 1.3rem;
+
+                     &:hover {
+                        opacity:.9;
+                        transition: all .3s ease;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
